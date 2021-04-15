@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="icon" href="img/logo.png" type="icon/png">
+		<script rel="javascript" src="js/styles_ran.js"></script>
+		<title>Website Name</title>	
+	</head>
+	<body onLoad="slideit()">
+		<div class="slideshow-container">
+			<div class="slideshow-inner">
+			  <div class="mySlides fade">
+				<img  src='img/m1.jpg' style='width: 100%;' alt="sally lightfoot crab"/>
+				<div class="text">Sally Lightfoot Crab</div>
+			  </div>
+			  <div class="mySlides fade">
+				<img  src='img/m2.jpg' style='width: 100%;' alt="fighting nazca boobies"/>
+				<div class="text">A scuffle between two Nazca Boobies</div>
+			  </div>
+			  <div class="mySlides fade">
+				<img  src='img/m3.jpg' style='width: 100%;' alt="otovalo waterfall"/>
+				<div class="text">A waterfall discovered on a hike in Otovalo</div>
+			  </div>
+			  <div class="mySlides fade">
+				<img  src='img/m4.jpg' style='width: 100%;' alt="pelican"/>
+				<div class="text">Pelican</div>
+			  </div>
+			</div>
+			  <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+			  <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+			</div>
+			<div class="side_dot">
+			  <span class="dot" onclick='currentSlide(1)'></span>
+			  <span class="dot" onclick='currentSlide(2)'></span>
+			  <span class="dot" onclick='currentSlide(3)'></span>
+			  <span class="dot" onclick='currentSlide(4)'></span>
+			</div>	
+		</div>
+		<div class="all_header">
+			<!---header laptop-->
+			<div id="header_lp">
+				<div class="header_cont">
+					<div class="header_content">
+						<div class="top_head">
+							<!-- search -->
+							<div class="srh_logo" id="srch" onclick="show_search()">
+								<svg version="1.1" x="0px" y="0px"
+									width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+									<path d="M344.5,298c15-23.6,23.8-51.6,23.8-81.7c0-84.1-68.1-152.3-152.1-152.3C132.1,64,64,132.2,64,216.3
+									c0,84.1,68.1,152.3,152.1,152.3c30.5,0,58.9-9,82.7-24.4l6.9-4.8L414.3,448l33.7-34.3L339.5,305.1L344.5,298z M301.4,131.2
+									c22.7,22.7,35.2,52.9,35.2,85c0,32.1-12.5,62.3-35.2,85c-22.7,22.7-52.9,35.2-85,35.2c-32.1,0-62.3-12.5-85-35.2
+									c-22.7-22.7-35.2-52.9-35.2-85c0-32.1,12.5-62.3,35.2-85c22.7-22.7,52.9-35.2,85-35.2C248.5,96,278.7,108.5,301.4,131.2z">
+									</path>
+							</svg>
+							</div>
+							<div class="search" id="search">
+								<span class="exit" onclick="close_search()">&times;</span>
+								<div class="form_cont">
+									<form name="search_form" action="search.php" method="GET">
+										<div class="form_input">
+											<input type="search" name="search" class="input" placeholder="search">
+										</div>
+										<div class="search_btn">
+											<input type="submit" name="search_go" value="Search" class="search_go">
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="top_head_cont">
+								<ul>
+									<li>Members<hr class="sample"></li>
+									<li>|</li>
+									<li>Educators<hr class="sample"></li>
+									<li>Donate<hr class="sample"></li>
+									<li>Welcome<hr class="sample"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="head">
+							<!-- logo -->
+							<div class="logo">
+								<span class="images">
+									<img src="img/logo.png" alt="logo" href="#">
+								</span>
+							</div>
+							<div class="lg_txt">
+								<span class="lo_txt_cont">museum of</span>
+								<span class="lo_txt_cont bold">Science + tech</span>
+								<span class="lo_txt_cont">Nigeria</span>
+							</div>
+							<div class="nav">
+								<ul>
+									<li class="active bold liside">Home<hr class="sample"></li>
+									<li class="bold liside">Explore<hr class="sample"></li>
+									<li class="bold liside">Visit<hr class="sample"></li>
+									<li class="bold liside">Support<hr class="sample"></li>
+									<li class="bold buy_btn">Buy Tickets<hr class="sample"></li>
+								</ul>
+								
+							</div>
+						</div>
+						<hr>
+					</div>
+				</div>
+			</div>
+			<!-- header phones-->
+			<div id="header_ph">
+				<div class="header_ph_cont">
+					<div class="head_ph_txt">
+						<div class="head">
+							<section class="head_logo">
+								<img src="img/logo.png" alt="logo">
+							</section>
+							<div class="lg_txt">
+								<span class="lo_txt_cont">museum of</span>
+								<span class="lo_txt_cont bold">Science + tech</span>
+								<span class="lo_txt_cont">Nigeria</span>
+							</div>
+							<section class="equiv" id="equiv" onclick="show_side_nav()">&equiv;</section>
+						</div>
+						<section class="nav" id="nav">
+							<section class="times" onclick="close_side_nav()" id="times">&times;</section>
+							<!-- search -->
+							<div class="search">
+								<div class="form_cont">
+									<form name="search_form" action="search.php" method="GET">
+										<div class="form_input">
+											<input type="search" name="search" class="input" placeholder="search">
+										</div>
+										<div class="search_btn">
+											<input type="submit" name="search_go" value="Search" class="search_go">
+											<span class="exit" onclick="close_search()">&times;</span>
+										</div>
+									</form>
+								</div>
+							</div>
+							<ul>
+								<li class="active bold liside">Home<hr class="sample"></li>
+								<li class="bold liside">Explore<hr class="sample"></li>
+								<li class="bold liside">Visit<hr class="sample"></li>
+								<li class="bold liside">Support<hr class="sample"></li>
+								<li class="bold buy_btn">Buy Tickets<hr class="sample"></li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+			<!-- sec header-->
+			<div class="sec_header">
+				<div class="sec_cont">
+					<section class="sec_left">
+						<span class="sec_tx1">Science At Home</span>
+						<span class="sec_tx">Keep learning in place and at your pace with science activities</span>
+						<span class="sec_tx">and topics you can access anytime.</span>
+						<span class="learn_btn">Learn more</span>
+					</section>
+					<div class="sec_bottom_cont">
+						<section class="sec_bootom">
+							<span class="sec_bootom_lg">
+								<svg version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+										<polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 "/>
+								</svg>
+							</span>
+							<span class="sec_bootom_head">Museum hours</span>
+							<span class="sec_bootom_head_txt">Closed today</span>
+						</section>
+						<section class="sec_plan_visit">
+							<span class="sec_plan_visit_lg">
+								<svg version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+							   		<polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 "/>
+							   </svg>
+							</span>
+							<span class="sec_plan_visit_txt">Plan your visit</span>
+							<span class="sec_plan_visit_lg">
+								<svg version="1.1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+							   		<polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 "/>
+							   </svg>
+							</span>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--contents-->
+		<div id="contents">
+			<div class="main_container">
+				<span class="imgbx"><img src="img/ice2.jpg" alt="ice_berg"> </span>
+				<span class="details">
+					<span class="contents_container">
+						<span class="cont_top">Exhibit</span>
+						<span class="cont_top_txt">Extreme ice</span>
+						<span class="cont_sec">Go to extremes with a photographer chasing</span>
+						<span class="cont_sec">Earth's diminishing glaciers.</span>
+					</span>
+				</span>
+			</div>
+			<div class="container_visit">
+				<div class="container_visit_address">
+					<span class="container_visit_address_top">Our location</span>
+					<span class="container_visit_address_txt">Ahamadu Bello University Samaru Kaduna State, Nigeria.</span>
+				</div>
+				<div class="local_map">
+					<div class="local_map_wi">
+						<div class="foote_head">Localisation</div>
+						<div class="map">
+							<!-- google map-->
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8070402.887972021!2d4.1774409631684675!3d9.006481064422278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0baf7da48d0d%3A0x99a8fe4168c50bc8!2sNigeria!5e0!3m2!1sen!2sng!4v1588387606686!5m2!1sen!2sng" class="iframe_map" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main_contents">
+			<div class="main_contents_cont_ex1 main_contents_cont_exx1">
+				<div class="top_main_contents_cont_ex1">
+					<section class="main_contents_cont_ex">
+						<div class="head_main_contents_cont_ex1">upcoming events</div>
+						<div class="date_main_contents_cont_ex1">18 May 2020</div>
+						<div class="main_contents_cont_ex1_txt">International Museum Day 2020</div>
+					</section>
+					<section  class="main_contents_cont_ex">
+						<div class="date_main_contents_cont_ex1">11 august 2020</div>
+						<div class="main_contents_cont_ex1_txt">Elements of arts explorer pack</div>
+						<div class="main_contents_cont_ex1_txt2">Self guided activities for kids 5 and older</div><br>
+						<div class="main_contents_cont_ex1_txt2">Discovery play for ages 5-6</div>
+					</section>
+					<section  class="main_contents_cont_ex">
+						<div class="date_main_contents_cont_ex1">12 august 2020</div>
+						<div class="main_contents_cont_ex1_txt">Tour, Talk and tea chinese ceramics</div>
+					</section>
+					<section  class="main_contents_cont_ex">
+						<div class="date_main_contents_cont_ex1">13 august 2020</div>
+						<div class="main_contents_cont_ex1_txt">Emperor's treasures workshops: poetry</div>
+						<div class="main_contents_cont_ex1_txt">Universeum 2020</div>
+					</section>
+					<section  class="main_contents_cont_ex">
+						<div class="date_main_contents_cont_ex1">14 august 2020</div>
+						<div class="main_contents_cont_ex1_txt">UMAC 2020 University of Sydney</div>
+						<div class="main_contents_cont_ex1_txt">APRU 2020: University Museums Research Symposium</div>
+					</section>
+				</div>
+			</div>
+			<div class="main_contents_cont_ex2">
+				<div class="main_contents_cont_ex2_txt">
+					<div class="main_contents_cont_ex2_img">
+						<img src="img/ma1.jpg" alt="takeover">
+					</div>
+					<div class="main_contents_cont_txt_ex2">Takeover: kristina wong</div>
+				</div>
+				<div class="main_contents_cont_ex2_txt">
+					<div class="main_contents_cont_ex2_img">
+						<img src="img/m2.jpg" alt="takeover">
+					</div>
+					<div class="main_contents_cont_txt_ex2">Takeover: kristina wong</div>
+				</div>
+				<div class="main_contents_cont_ex2_txt">
+					<div class="main_contents_cont_ex2_img">
+						<img src="img/m10.jpg" alt="takeover">
+					</div>
+					<div class="main_contents_cont_txt_ex2">Takeover: kristina wong</div>
+				</div>
+				<div class="main_contents_cont_ex2_txt">
+					<div class="main_contents_cont_ex2_img">
+						<img src="img/ma2.jpg" alt="takeover">
+					</div>
+					<div class="main_contents_cont_txt_ex2">Takeover: kristina wong</div>
+				</div>
+			</div>
+			<div class="main_contents_cont_ex1">
+				<div class="main_contents_cont_ex1_bx bg2">
+					<div class="main_contents_cont_ex1_head">pokemon go</div>
+					<div class="main_contents_cont_ex1_txt tx3">and other visiting tips</div>
+				</div>
+				<div class="main_contents_cont_ex1_bx bg3">
+					<div class="main_contents_cont_ex1_head">Book your school tour now</div>
+				</div>
+				<div class="main_contents_cont_ex1_bx bg4">
+					<div class="main_contents_cont_ex1_head">pokemon go</div>
+				</div>
+				<div class="main_contents_cont_ex1_bx bg1">
+					<div class="main_contents_cont_ex1_head">pokemon go</div>
+					<div class="main_contents_cont_ex1_txt tx3">and other visiting tips</div>
+				</div>
+				<div class="main_contents_cont_ex1_bx bg5">
+					<div class="main_contents_cont_ex1_head">pokemon go</div>
+				</div>
+				<div class="main_contents_cont_ex1_bx bg6">
+					<div class="main_contents_cont_ex1_head">pokemon go</div>
+				</div>
+			</div>
+		</div>
+		<div class="contents_sec_nd">
+			<div class="contents_sec_nd_img">
+				<div class="img">
+					<a href="javascript:slidelink()"
+					onMouseover="window.status='Click on the image to learn more about it!';return true"
+					onMouseout="window.status=''"><img src="img/m7.jpg" name="slide" class="slide"></a> 
+				</div>
+			</div>
+			<div class="contents_sec_nd_left">
+				<div class="contents_sec_nd_left_cont">
+					<span class="contents_sec_nd_left_head">This is our future</span>
+					<span class="contents_sec_nd_left_top_head">Inspiring the next future generations of inovators</span>
+					<span class="contents_sec_nd_left_txt">From field trips to teacher resources, MSI provides learningexperiences both inside and outside the classroom because improving science education is critical.
+					</span>
+					<span class="contents_sec_nd_left_top_head_link_txt"><a href="#">Welcome to science initiative</a></span>
+					<span class="contents_sec_nd_left_top_head_link_txt"><a href="#">Field Trips</a></span>
+					<span class="contents_sec_nd_left_top_head_link_txt"><a href="#">Educators Resources</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="top_footer">
+			<div class="top_footer_cont">
+				<div class="top_footer_cont_txt">
+					<span class="top_footer_cont_txthead">This is our future</span>
+					<span class="top_footer_cont_txttop_head">Support The Museum</span>
+					<span class="top_footer_cont_txt_txt">Help us transform lives through thepower of science and scienceeducation—inside the Museum, in ourschools and beyond—with yoursupport of MSI.
+					</span>
+					<span class="top_footer_cont_txt_top_head_link_txt"><a href="#">Become a member</a></span>
+					<span class="top_footer_cont_txt_top_head_link_txt"><a href="#">Donate now</a></span>
+					<span class="top_footer_cont_txt_top_head_link_txt"><a href="#">Be a coporate member</a></span>
+				</div>
+			</div>
+			<div class="top_footer_cont_img">
+				<div class="top_footer_img">
+					<img src="img/kids.jpg" alt="kids">
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<div id="footer">
+			<div class="footer">
+				<div class="footer_cont">
+					<div class="footer_head">
+						<div class="footer_si">
+							<span class="sub_txt">Subscribe To Our Newsletter</span>
+							<div class="footer_form">
+								<form name="newsletter_form" action="newsletter.php" method="POST">
+									<input type="text" name="newsletter" placeholder="Enter your email" >
+									<div class="footer_submit">
+										<input type="submit" name="news_go" value="subscribe">
+									</div>
+								</form>
+							</div>
+						</div>
+						<!-- social btn-->
+						<div class="social">
+							<div class="social_btn">
+								<!--facebook social btn-->
+								<div class="social_btn_logo">
+									<span class="soc_btn">
+										<a href="#">
+											<!-- facebook-->
+											<svg version="1.1" id="Layer_1" x="0px" y="0px"
+											viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+												<path d="M288,192v-38.1c0-17.2,3.8-25.9,30.5-25.9H352V64h-55.9c-68.5,0-91.1,31.4-91.1,85.3V192h-45v64h45v192h83V256h56.4l7.6-64
+													H288z"></path>
+											</svg>
+										</a>
+									</span>
+								</div>
+								<!--twitter social btn-->
+								<div class="social_btn_logo">
+									<span class="soc_btn"><a href="#">
+										<!-- twitter-->
+										<svg version="1.1" id="Layer_1" x="0px" y="0px"
+										viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+											<path d="M492,109.5c-17.4,7.7-36,12.9-55.6,15.3c20-12,35.4-31,42.6-53.6c-18.7,11.1-39.4,19.2-61.5,23.5
+											C399.8,75.8,374.6,64,346.8,64c-53.5,0-96.8,43.4-96.8,96.9c0,7.6,0.8,15,2.5,22.1c-80.5-4-151.9-42.6-199.6-101.3
+											c-8.3,14.3-13.1,31-13.1,48.7c0,33.6,17.2,63.3,43.2,80.7C67,210.7,52,206.3,39,199c0,0.4,0,0.8,0,1.2c0,47,33.4,86.1,77.7,95
+											c-8.1,2.2-16.7,3.4-25.5,3.4c-6.2,0-12.3-0.6-18.2-1.8c12.3,38.5,48.1,66.5,90.5,67.3c-33.1,26-74.9,41.5-120.3,41.5
+											c-7.8,0-15.5-0.5-23.1-1.4C62.8,432,113.7,448,168.3,448C346.6,448,444,300.3,444,172.2c0-4.2-0.1-8.4-0.3-12.5
+											C462.6,146,479,129,492,109.5z"></path>
+										</svg></a>
+									</span>
+								</div>
+								<!--instagram social btn-->
+								<div class="social_btn_logo">
+									<span class="soc_btn"><a href="#">
+										<!-- instagram-->
+										<svg version="1.1" id="Layer_1"  x="0px" y="0px"
+										viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+										<g>
+											<circle cx="256" cy="255.833" r="80"></circle>
+										</g>
+										<g>
+											<path d="M177.805,176.887c21.154-21.154,49.279-32.929,79.195-32.929s58.041,11.837,79.195,32.991
+											c13.422,13.422,23.011,29.551,28.232,47.551H448.5v-113c0-26.51-20.49-47-47-47h-288c-26.51,0-49,20.49-49,47v113h85.072
+												C154.794,206.5,164.383,190.309,177.805,176.887z M416.5,147.7c0,7.069-5.73,12.8-12.8,12.8h-38.4c-7.069,0-12.8-5.73-12.8-12.8
+													v-38.4c0-7.069,5.73-12.8,12.8-12.8h38.4c7.069,0,12.8,5.73,12.8,12.8V147.7z"></path>
+												<path d="M336.195,335.279c-21.154,21.154-49.279,32.679-79.195,32.679s-58.041-11.462-79.195-32.616
+												c-21.115-21.115-32.759-49.842-32.803-78.842H64.5v143c0,26.51,22.49,49,49,49h288c26.51,0,47-22.49,47-49v-143h-79.502
+												C368.955,285.5,357.311,314.164,336.195,335.279z" ></path>
+											</g>
+										</svg></a>
+									</span>
+								</div>
+								<!--pinterest social btn-->
+								<div class="social_btn_logo">
+									<span class="soc_btn"><a href="#">
+										<!-- pinterest-->
+										<svg version="1.1" id="Layer_1"  x="0px" y="0px"
+										viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+											<g>
+												<path d="M256,32C132.3,32,32,132.3,32,256c0,91.7,55.2,170.5,134.1,205.2c-0.6-15.6-0.1-34.4,3.9-51.4
+													c4.3-18.2,28.8-122.1,28.8-122.1s-7.2-14.3-7.2-35.4c0-33.2,19.2-58,43.2-58c20.4,0,30.2,15.3,30.2,33.6
+													c0,20.5-13.1,51.1-19.8,79.5c-5.6,23.8,11.9,43.1,35.4,43.1c42.4,0,71-54.5,71-119.1c0-49.1-33.1-85.8-93.2-85.8
+													c-67.9,0-110.3,50.7-110.3,107.3c0,19.5,5.8,33.3,14.8,43.9c4.1,4.9,4.7,6.9,3.2,12.5c-1.1,4.1-3.5,14-4.6,18
+													c-1.5,5.7-6.1,7.7-11.2,5.6c-31.3-12.8-45.9-47-45.9-85.6c0-63.6,53.7-139.9,160.1-139.9c85.5,0,141.8,61.9,141.8,128.3
+													c0,87.9-48.9,153.5-120.9,153.5c-24.2,0-46.9-13.1-54.7-27.9c0,0-13,51.6-15.8,61.6c-4.7,17.3-14,34.5-22.5,48
+													c20.1,5.9,41.4,9.2,63.5,9.2c123.7,0,224-100.3,224-224C480,132.3,379.7,32,256,32z" ></path>
+											</g>
+										</svg></a>
+									</span>
+								</div>
+								<!--youtube btn-->
+								<div class="social_btn_logo">
+									<span class="soc_btn youtube"><a href="#">
+										<!-- youtube-->
+										<svg version="1.1" x="0px" y="0px"
+												width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+											<g>
+												<path d="M508.6,148.8c0-45-33.1-81.2-74-81.2C379.2,65,322.7,64,265,64c-3,0-6,0-9,0s-6,0-9,0c-57.6,0-114.2,1-169.6,3.6
+													c-40.8,0-73.9,36.4-73.9,81.4C1,184.6-0.1,220.2,0,255.8C-0.1,291.4,1,327,3.4,362.7c0,45,33.1,81.5,73.9,81.5
+													c58.2,2.7,117.9,3.9,178.6,3.8c60.8,0.2,120.3-1,178.6-3.8c40.9,0,74-36.5,74-81.5c2.4-35.7,3.5-71.3,3.4-107
+													C512.1,220.1,511,184.5,508.6,148.8z M207,353.9V157.4l145,98.2L207,353.9z"></path>
+											</g>
+										</svg></a>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="sec_footer">
+					<div class="sec_foot_cont">
+						<div class="sec_foot_left w3">
+							<span class="sec_foot_head">Suppport us</span>
+							<span class="sec_foot_txt bold">Help us transform lives through the power of science and science education.</span><br><br>
+							<span class="sec_foot_link">
+								<span class="sec_link_logo">
+									<svg version="1.1" x="0px" y="0px"
+										 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+								   		<polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 "></polygon>
+								   </svg>
+								</span>
+								<span class="sec_link"><a href="#">Become a member</a></span>
+							</span>
+							<span class="sec_foot_link">
+								<span class="sec_link_logo">
+									<svg version="1.1" x="0px" y="0px"
+										 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+								   		<polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 "></polygon>
+								   </svg>
+								</span>
+								<span class="sec_link"><a href="#">Donate</a></span>
+							</span>
+						</div>
+						<div class="sec_foot_left w3">
+							<span class="sec_foot_head">Visit</span>
+							<span class="sec_foot_txt_2 bold"><a href="#">Map</a></span>
+							<span class="sec_foot_txt_2 bold"><a href="#">Plan a Vists</a></span>
+							<span class="sec_foot_txt_2 bold"><a href="#">Tickets Prices</a></span>
+							<span class="sec_foot_txt_2 bold"><a href="#">Store</a></span>
+							<span class="sec_foot_txt_2 bold"><a href="#">Events</a></span>
+							<span class="sec_foot_txt_2 bold"><a href="#">Book School Tour</a></span>
+						</div>
+						<div class="sec_foot_left w3">
+							<span class="sec_foot_head">Explore</span>
+							<span class="sec_foot_txt_2 bold"><a href="#">What's Here</a></span>
+							<span class="sec_foot_txt_2 bold"><a href="#">Education</a></span>
+							<span class="sec_foot_txt_2 bold"><a href="#">About US</a></span>
+							<span class="sec_foot_txt_2 bold"><a href="#">Experiment</a></span>
+							<span class="sec_foot_txt_2 bold"><a href="#">Careers</a></span>
+							<span class="sec_foot_txt_2 bold"><a href="#">Press</a></span>
+						</div>
+						<div class="sec_foot_left w3">
+							<span class="sec_foot_head">Location + hours</span>
+							<span class="sec_foot_txt bold">Ahamadu Bello University Samaru Kaduna State, Nigeria.</span><br>
+							<span class="sec_foot_txt_2 bold"><a href="#">Opened Today</a></span>
+							<span class="sec_foot_txt_2 bold"><a href="#">Contact us</a></span>
+							<span class="sec_foot_link">
+								<span class="sec_link_logo">
+									<svg version="1.1" x="0px" y="0px"
+										 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+								   		<polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 "></polygon>
+								   </svg>
+								</span>
+								<span class="sec_link"><a href="#">Donate</a></span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copy">
+				<div class="copy_cont">
+					<span class="copy_sign">&copy;</span>
+					<span class="copy_txt"> 2020 Museum of Science And Tech, Nigeria.</span>
+					<span class="copy_txt_2"><a href="mailto: sanusiabdulazeezadebayo@gmail.com">HTML by sanusi abdulazeez</a></span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script rel="javascript" src="js/main.js"></script>
+	<script rel="javascript" src="js/ran.js"></script>
+	  <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</html>
